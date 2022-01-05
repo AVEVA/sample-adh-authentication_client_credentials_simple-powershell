@@ -26,6 +26,6 @@ $TokenBody = $TokenRequest | ConvertFrom-Json
 $AuthHeader = @{
     Authorization = "Bearer " + $TokenBody.access_token
 }
-$TenantRequest = Invoke-WebRequest -Uri ($Resource + "/api/" + $ApiVersion + "/Tenants/" + $TenantId) -Method Get -Headers $AuthHeader -UseBasicParsing
+$TenantRequest = Invoke-WebRequest -Uri ($Resource + "/api/" + $ApiVersion + "/Tenant/" + $TenantId) -Method Get -Headers $AuthHeader -UseBasicParsing
 
 $TenantRequest
