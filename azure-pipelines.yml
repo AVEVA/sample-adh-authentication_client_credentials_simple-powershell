@@ -37,8 +37,6 @@ jobs:
   - job: Tests
     strategy:
       matrix:
-        linux:
-          agentOS: Linux
         windows:
           agentOS: Windows_NT
     pool:
