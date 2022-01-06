@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 
-[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/OCS/osisoft.sample-ocs-authentication_client_credentials_simple-java?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=4475&branchName=main)
+[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/OCS/osisoft.sample-ocs-authentication_client_credentials_simple-powershell?repoName=osisoft%2Fsample-ocs-authentication_client_credentials_simple-powershell&branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=4479&repoName=osisoft%2Fsample-ocs-authentication_client_credentials_simple-powershell&branchName=main)
 
 Developed against Powershell 5.1
 
