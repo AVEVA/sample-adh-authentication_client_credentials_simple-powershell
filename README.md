@@ -16,7 +16,7 @@ Developed against Powershell 5.1
 
 ## About this sample
 
-This sample is meant to be very simple and straightforward to show how you can use common Powershell functions to authenticate against OCS. In a more complete application you should reuse the bearer token as appropriate and only reissue a new token when it is about to timeout.  
+This sample is meant to be very simple and straightforward to show how you can use common Powershell cmdlets to authenticate against OCS. In a more complete application you should reuse the bearer token as appropriate and only reissue a new token when it is about to timeout.  
 
 Steps:
 1. Get needed variables
@@ -42,10 +42,10 @@ OSIsoft Cloud Services is secured by obtaining tokens from its identity endpoint
 
 ## Running the sample
 
-To run this example from the command line once the `appsettings.json` is configured, run
+To run this example from Windows Powershell once the `appsettings.json` is configured, run
 
 ```shell
-PowerShell -file "GetToken.ps1"
+GetToken.ps1
 ```
 
 ---
