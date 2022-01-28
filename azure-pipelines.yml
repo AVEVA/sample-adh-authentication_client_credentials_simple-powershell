@@ -45,7 +45,7 @@ jobs:
     steps:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
-          secrets: 'TenantId, ClientId, ClientSecret'
+          secrets: 'TenantId, ClientId, ClientSecret, Resource'
 
       - task: PowerShell@2
         inputs:
