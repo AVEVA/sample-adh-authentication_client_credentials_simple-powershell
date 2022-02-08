@@ -58,6 +58,7 @@ jobs:
         displayName: Install code analyzer
         
       - powershell: Invoke-ScriptAnalyzer -Path GetToken.ps1
+        failOnStderr: true
         displayName: Run analysis
         
   - template: '/miscellaneous/build_templates/code-analysis.yml@templates'
