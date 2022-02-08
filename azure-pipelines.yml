@@ -54,11 +54,11 @@ jobs:
       name: 00-OSIManaged-Containers
       demands: Agent.OS -equals Windows_NT
     steps:
-      - powershell: Install-Module -Name PSScriptAnalyzer
+      - powershell: Install-Module -Name PSScriptAnalyzer -Force
         displayName: Install code analyzer
         
       - powershell: Invoke-ScriptAnalyzer -Path GetToken.ps1
-        displayName: Install code analyzer
+        displayName: Run analysis
         
   - template: '/miscellaneous/build_templates/code-analysis.yml@templates'
     parameters:
