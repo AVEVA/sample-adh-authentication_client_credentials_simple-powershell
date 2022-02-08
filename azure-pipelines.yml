@@ -49,7 +49,7 @@ jobs:
           filePath: $(System.DefaultWorkingDirectory)\GetToken.ps1
         displayName: 'Run tests'
 
-  - job: Code Analysis
+  - job: Code_Analysis
     pool:
       name: 00-OSIManaged-Containers
       demands: Agent.OS -equals Windows_NT
