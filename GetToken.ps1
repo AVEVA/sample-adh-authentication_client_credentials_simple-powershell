@@ -1,5 +1,5 @@
 ﻿# Step 1: get needed variables
-$Appsettings = $PowerShellObject=Get-Content -Path appsettings.json | ConvertFrom-Json
+$Appsettings = Get-Content -Path appsettings.json | ConvertFrom-Json
 $TenantId = $Appsettings.TenantId
 $ApiVersion = $Appsettings.ApiVersion
 $Resource = $Appsettings.Resource
