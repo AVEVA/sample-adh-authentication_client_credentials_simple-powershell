@@ -35,13 +35,9 @@ variables:
 
 jobs:
   - job: Tests
-    strategy:
-      matrix:
-        windows:
-          agentOS: Windows_NT
     pool:
       name: 00-OSIManaged-Containers
-      demands: Agent.OS -equals $(agentOS)
+      demands: Agent.OS -equals Windows_NT
     steps:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
@@ -53,6 +49,18 @@ jobs:
           filePath: $(System.DefaultWorkingDirectory)\GetToken.ps1
         displayName: 'Run tests'
 
+  - job: Code_Analysis
+    pool:
+      name: 00-OSIManaged-Containers
+      demands: Agent.OS -equals Windows_NT
+    steps:
+      - powershell: Install-Module -Name PSScriptAnalyzer -Force
+        displayName: Install code analyzer
+        
+      - powershell: Invoke-ScriptAnalyzer -EnableExit -Path GetToken.ps1
+        failOnStderr: true
+        displayName: Run analysis
+        
   - template: '/miscellaneous/build_templates/code-analysis.yml@templates'
     parameters:
       skipPolaris: true
