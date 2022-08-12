@@ -33,11 +33,19 @@ variables:
   - name: analysisProject
     value: Auth-CC_Powershell
 
+parameters:
+  - name: pool
+    default: 00-OSIManaged-Containers
+  - name: containerDemands
+    type: object
+    default: ['Agent.OS -equals Windows_NT']
+
 jobs:
   - job: Tests
+    condition: ne(variables['Build.Reason'], 'Schedule')
     pool:
-      name: 00-OSIManaged-Containers
-      demands: Agent.OS -equals Windows_NT
+      name: ${{ parameters.pool }}
+      demands: ${{ parameters.containerDemands }}
     steps:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
@@ -51,8 +59,8 @@ jobs:
 
   - job: Code_Analysis
     pool:
-      name: 00-OSIManaged-Containers
-      demands: Agent.OS -equals Windows_NT
+      name: ${{ parameters.pool }}
+      demands: ${{ parameters.containerDemands }}
     steps:
       - powershell: Install-Module -Name PSScriptAnalyzer -Force
         displayName: Install code analyzer
