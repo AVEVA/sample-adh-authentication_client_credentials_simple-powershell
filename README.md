@@ -1,8 +1,5 @@
 # AVEVA Data Hub Client Credentials Powershell Sample
 
-| :loudspeaker: **Notice**: Samples have been updated to reflect that they work on AVEVA Data Hub. The samples also work on OSIsoft Cloud Services unless otherwise noted. |
-| -----------------------------------------------------------------------------------------------|  
-
 **Version:** 1.0.2
   
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_client_credentials_simple-powershell?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=4479&branchName=main)
