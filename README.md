@@ -1,6 +1,6 @@
 # AVEVA Data Hub Client Credentials Powershell Sample
 
-**Version:** 1.0.2
+**Version:** 1.0.3
   
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_client_credentials_simple-powershell?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=4479&branchName=main)
 
